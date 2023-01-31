@@ -4,7 +4,7 @@
     <x:Property Name="Result" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1406,3590</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1406,2162</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestCase_Settings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -79,7 +79,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCase_Settings" sap:VirtualizedContainerService.HintSize="524,3525.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestCase_Settings" sap:VirtualizedContainerService.HintSize="524,2097.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -92,7 +92,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="462,3125.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="462,1697.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="Initialized" />
         <Variable x:TypeArguments="sen:EnvironmentSettings" Name="Settings" />
@@ -102,7 +102,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Settings\\Check Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,536.6666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Flows\\Settings\\Check Environment Settings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Settings\\Check Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,153.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Flows\\Settings\\Check Environment Settings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:Boolean" x:Key="Initialized">
             <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Initialized</CSharpReference>
@@ -119,7 +119,7 @@
           </InArgument>
         </uta:VerifyExpression.Expression>
       </uta:VerifyExpression>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\Settings\Initialize Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,589.3333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Flows\Settings\Initialize Environment Settings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\Settings\Initialize Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,258.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Flows\Settings\Initialize Environment Settings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="sen:EnvironmentSettings" x:Key="Settings">
             <CSharpReference x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">Settings</CSharpReference>
@@ -137,7 +137,7 @@
           </InArgument>
         </uta:VerifyExpression.Expression>
       </uta:VerifyExpression>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Settings\\Check Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,536.6666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Flows\\Settings\\Check Environment Settings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Settings\\Check Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,153.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Flows\\Settings\\Check Environment Settings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:Boolean" x:Key="Initialized">
             <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">Initialized</CSharpReference>
@@ -154,7 +154,7 @@
           </InArgument>
         </uta:VerifyExpression.Expression>
       </uta:VerifyExpression>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Settings\\Initialize Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,589.3333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Flows\\Settings\\Initialize Environment Settings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Settings\\Initialize Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,258.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Flows\\Settings\\Initialize Environment Settings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="sen:EnvironmentSettings" x:Key="Settings">
             <CSharpReference x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">Settings</CSharpReference>

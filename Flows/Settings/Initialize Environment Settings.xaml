@@ -89,10 +89,10 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:Comment sap:VirtualizedContainerService.HintSize="512.6666666666666,98.66666666666667" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Creates a new environment settings variable" />
-    <If sap:VirtualizedContainerService.HintSize="512.6666666666666,819.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+    <If DisplayName="If No Process Environment was explicitly passed" sap:VirtualizedContainerService.HintSize="512.6666666666666,819.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
-          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">ProcessEnvironment == null</CSharpValue>
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">ProcessEnvironment == null</CSharpValue>
         </InArgument>
       </If.Condition>
       <If.Then>
@@ -114,7 +114,7 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
       <If.Else>
-        <Assign DisplayName="Assign - Process Environment" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign DisplayName="Assign Environment" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>
             <OutArgument x:TypeArguments="sen:ProcessEnvironment">
               <CSharpReference x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">ProcessEnv</CSharpReference>
@@ -122,7 +122,7 @@
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="sen:ProcessEnvironment">
-              <CSharpValue x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">ProcessEnvironment.Value</CSharpValue>
+              <CSharpValue x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">ProcessEnvironment.Value</CSharpValue>
             </InArgument>
           </Assign.Value>
         </Assign>
