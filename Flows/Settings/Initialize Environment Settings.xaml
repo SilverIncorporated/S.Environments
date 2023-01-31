@@ -6,7 +6,7 @@
   </x:Members>
   <sap2010:Annotation.AnnotationText>UPTF000000F8eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiQ3JlYXRlcyBhIG5ldyBlbnZpcm9ubWVudCBzZXR0aW5ncyBBTkQgc3RvcmVzIHRoaXMgc2V0dGluZyBpbiB0aGUgcHJvY2VzcyBlbnZpcm9ubWVudCIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1406,1698</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1406,920</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -78,7 +78,7 @@
       <AssemblyReference>System.Security.Permissions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Creates a new environment settings AND stores this setting in the process environment" DisplayName="New_Environment_Settings" sap:VirtualizedContainerService.HintSize="574.6666666666666,1633.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Creates a new environment settings AND stores this setting in the process environment" DisplayName="New_Environment_Settings" sap:VirtualizedContainerService.HintSize="1036,722" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProductKey" />
       <Variable x:TypeArguments="sen:ProcessEnvironment" Name="ProcessEnv" />
@@ -88,60 +88,68 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="512.6666666666666,98.66666666666667" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Creates a new environment settings variable" />
-    <If DisplayName="If No Process Environment was explicitly passed" sap:VirtualizedContainerService.HintSize="512.6666666666666,819.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
-      <If.Condition>
-        <InArgument x:TypeArguments="x:Boolean">
-          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">ProcessEnvironment == null</CSharpValue>
-        </InArgument>
-      </If.Condition>
-      <If.Then>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Environment\\Parse Process Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,536.6666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Flows\\Environment\\Parse Process Environment.xaml">
-          <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="Environment">
-              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">Environment</CSharpValue>
-            </InArgument>
-            <OutArgument x:TypeArguments="sen:ProcessEnvironment" x:Key="ProcessEnvironment">
-              <CSharpReference x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">ProcessEnv</CSharpReference>
-            </OutArgument>
-          </ui:InvokeWorkflowFile.Arguments>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:InvokeWorkflowFile>
-      </If.Then>
-      <If.Else>
-        <Assign DisplayName="Assign Environment" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
-          <Assign.To>
-            <OutArgument x:TypeArguments="sen:ProcessEnvironment">
-              <CSharpReference x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">ProcessEnv</CSharpReference>
-            </OutArgument>
-          </Assign.To>
-          <Assign.Value>
-            <InArgument x:TypeArguments="sen:ProcessEnvironment">
-              <CSharpValue x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">ProcessEnvironment.Value</CSharpValue>
-            </InArgument>
-          </Assign.Value>
-        </Assign>
-      </If.Else>
-    </If>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Product Key\\Get Product Key.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="512.6666666666666,153.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Actions\\Product Key\\Get Product Key.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="ProductKey">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">ProductKey</CSharpReference>
-        </OutArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:InvokeWorkflowFile>
-    <Assign DisplayName="Assign - Output Environment Settings" sap:VirtualizedContainerService.HintSize="512.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="974,98.66666666666667" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Creates a new environment settings variable" />
+    <Parallel sap:VirtualizedContainerService.HintSize="974,101.33333333333333" sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <If DisplayName="If No Process Environment was explicitly passed" sap:VirtualizedContainerService.HintSize="400,54" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Condition>
+          <InArgument x:TypeArguments="x:Boolean">
+            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">ProcessEnvironment == null</CSharpValue>
+          </InArgument>
+        </If.Condition>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Environment\\Parse Process Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,206" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Flows\\Environment\\Parse Process Environment.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="Environment">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">Environment</CSharpValue>
+              </InArgument>
+              <OutArgument x:TypeArguments="sen:ProcessEnvironment" x:Key="ProcessEnvironment">
+                <CSharpReference x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">ProcessEnv</CSharpReference>
+              </OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </If.Then>
+        <If.Else>
+          <Assign DisplayName="Assign Environment" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="sen:ProcessEnvironment">
+                <CSharpReference x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">ProcessEnv</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="sen:ProcessEnvironment">
+                <CSharpValue x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">ProcessEnvironment.Value</CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+        </If.Else>
+      </If>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Product Key\\Get Product Key.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Actions\\Product Key\\Get Product Key.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <OutArgument x:TypeArguments="x:String" x:Key="ProductKey">
+            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">ProductKey</CSharpReference>
+          </OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+    </Parallel>
+    <Assign DisplayName="Assign - Output Environment Settings" sap:VirtualizedContainerService.HintSize="974,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sen:EnvironmentSettings">
           <CSharpReference x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Settings</CSharpReference>
@@ -149,11 +157,11 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="sen:EnvironmentSettings">
-          <CSharpValue x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">new EnvironmentSettings(ProcessEnv, ProductKey, new Dictionary&lt;string,string&gt;())</CSharpValue>
+          <CSharpValue x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">new EnvironmentSettings(ProcessEnv, ProductKey)</CSharpValue>
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Settings\\Set Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="512.6666666666666,206" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Actions\\Settings\\Set Environment Settings.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Settings\\Set Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="974,206" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Actions\\Settings\\Set Environment Settings.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sen:EnvironmentSettings" x:Key="Settings">
           <CSharpValue x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Settings</CSharpValue>
