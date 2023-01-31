@@ -22,8 +22,8 @@
       "Category": null,
       "Tooltip": "Environment to set. If this arg or ProcessEnvironment are not set, then environment will be pulled from assets",
       "Placeholder": null,
-      "Widget": null,
-      "IsRequired": true,
+      "Widget": "TextComposer",
+      "IsRequired": false,
       "IsPrincipal": true,
       "DataSourceItems": [
         "\"\""
