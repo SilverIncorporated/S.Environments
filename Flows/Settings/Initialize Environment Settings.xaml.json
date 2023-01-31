@@ -22,7 +22,7 @@
       "Category": null,
       "Tooltip": "Environment to set. If this arg or ProcessEnvironment are not set, then environment will be pulled from assets",
       "Placeholder": null,
-      "Widget": "Dropdown",
+      "Widget": null,
       "IsRequired": true,
       "IsPrincipal": true,
       "DataSourceItems": [
@@ -35,7 +35,7 @@
       "Category": null,
       "Tooltip": "Direct process environment input. If this or environment are not set, then environment will be pulled from assets",
       "Placeholder": null,
-      "Widget": "Dropdown",
+      "Widget": null,
       "IsRequired": false,
       "IsPrincipal": true,
       "DataSourceItems": []
