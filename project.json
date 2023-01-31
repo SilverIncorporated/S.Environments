@@ -3,14 +3,15 @@
   "description": "Environment handling within the SCALE Platform",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "S.Environments.NET": "1.2.1",
-    "UiPath.System.Activities": "22.10.4"
+    "S.Environments.NET": "1.2.3",
+    "UiPath.System.Activities": "22.10.4",
+    "UiPath.Testing.Activities": "22.12.0-preview"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.12.0.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.1.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -33,7 +34,12 @@
     "outputType": "Library",
     "libraryOptions": {
       "includeOriginalXaml": false,
-      "privateWorkflows": []
+      "privateWorkflows": [
+        "Actions/Settings/Set Environment Settings.xaml",
+        "Actions/Product Key/Get Product Key.xaml",
+        "Actions/Settings/Check Environment.xaml",
+        "Actions/Settings/Get Environment Settings.xaml"
+      ]
     },
     "processOptions": {
       "ignoredFiles": []
@@ -44,7 +50,15 @@
         "testCaseId": "ca690881-5d55-4a5a-abe5-49c5d7596d04",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "Flows\\TestCase_All.xaml"
+        "fileName": "Flows\\Variables\\TestCase_Variables.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "8b7d2dff-681f-4038-bad5-b71693cccfa8",
+        "dataVariationFilePath": ".variations\\TestData_Settings_Sheet1.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Flows\\Settings\\TestCase_Settings.xaml"
       }
     ],
     "modernBehavior": true

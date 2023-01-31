@@ -1,0 +1,20 @@
+{
+  "DisplayName": "Set Environment Settings",
+  "Tooltip": "Set the environment settings variable",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "Settings",
+      "DisplayName": "Settings",
+      "Category": null,
+      "Tooltip": "Settings variable to set",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "DataSourceItems": []
+    }
+  ]
+}
