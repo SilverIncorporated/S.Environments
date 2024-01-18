@@ -1,15 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Create_Environment_Settings" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sen="clr-namespace:S.Environments.NET;assembly=S.Environments.NET" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Create_Environment_Settings" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:seo="clr-namespace:S.Environments.Objects;assembly=S.Environments.Objects.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property sap2010:Annotation.AnnotationText="Settings created" Name="Settings" Type="OutArgument(sen:EnvironmentSettings)" />
+    <x:Property sap2010:Annotation.AnnotationText="Settings created" Name="Settings" Type="OutArgument(seo:EnvironmentSettings)" />
     <x:Property sap2010:Annotation.AnnotationText="Environment to set. If this arg or ProcessEnvironment are not set, then environment will be pulled from assets" Name="Environment" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="Direct process environment input. If this or environment are not set, then environment will be pulled from assets" Name="ProcessEnvironment" Type="InArgument(s:Nullable(sen:ProcessEnvironment))" />
+    <x:Property sap2010:Annotation.AnnotationText="Direct process environment input. If this or environment are not set, then environment will be pulled from assets" Name="ProcessEnvironment" Type="InArgument(s:Nullable(seo:ProcessEnvironment))" />
   </x:Members>
   <sap2010:Annotation.AnnotationText>UPTF000000F8eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiQ3JlYXRlcyBhIG5ldyBlbnZpcm9ubWVudCBzZXR0aW5ncyBBTkQgc3RvcmVzIHRoaXMgc2V0dGluZyBpbiB0aGUgcHJvY2VzcyBlbnZpcm9ubWVudCIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1357.3333333333333,920</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1650,1538.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="25">
+    <scg:List x:TypeArguments="x:String" Capacity="50">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -32,56 +32,52 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>S.Environments.NET</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>S.Environments.Objects</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>S.Environments.Objects.Core</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>S.Environments.NET</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Creates a new environment settings AND stores this setting in the process environment" DisplayName="New_Environment_Settings" sap:VirtualizedContainerService.HintSize="496,674.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Creates a new environment settings AND stores this setting in the process environment" DisplayName="New_Environment_Settings" sap:VirtualizedContainerService.HintSize="1660,1474" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProductKey" />
-      <Variable x:TypeArguments="sen:ProcessEnvironment" Name="ProcessEnv" />
+      <Variable x:TypeArguments="seo:ProcessEnvironment" Name="ProcessEnv" />
       <Variable x:TypeArguments="x:String" Name="ProductName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -89,15 +85,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="434,98.66666666666667" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Creates a new environment settings variable" />
-    <Parallel DisplayName="Parallel - Get all Settings" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="Parallel_1">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="1598,98.66666666666667" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Creates a new environment settings variable" />
+    <Parallel DisplayName="Parallel - Get all Settings" sap:VirtualizedContainerService.HintSize="1598,853.3333333333334" sap2010:WorkflowViewState.IdRef="Parallel_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If DisplayName="If No Process Environment was explicitly passed" sap:VirtualizedContainerService.HintSize="400,54" sap2010:WorkflowViewState.IdRef="If_1">
+      <If DisplayName="If No Process Environment was explicitly passed" sap:VirtualizedContainerService.HintSize="484,806" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">ProcessEnvironment == null</CSharpValue>
@@ -105,18 +101,18 @@
         </If.Condition>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Environment\\Parse Process Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,206" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Flows\\Environment\\Parse Process Environment.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Flows\\Environment\\Parse Process Environment.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,536.6666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Flows\\Environment\\Parse Process Environment.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="Environment">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">Environment</CSharpValue>
               </InArgument>
-              <OutArgument x:TypeArguments="sen:ProcessEnvironment" x:Key="ProcessEnvironment">
-                <CSharpReference x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">ProcessEnv</CSharpReference>
+              <OutArgument x:TypeArguments="seo:ProcessEnvironment" x:Key="ProcessEnvironment">
+                <CSharpReference x:TypeArguments="seo:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">ProcessEnv</CSharpReference>
               </OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
@@ -128,21 +124,21 @@
           </ui:InvokeWorkflowFile>
         </If.Then>
         <If.Else>
-          <Assign DisplayName="Assign Environment" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign DisplayName="Assign Environment" sap:VirtualizedContainerService.HintSize="450,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
-              <OutArgument x:TypeArguments="sen:ProcessEnvironment">
-                <CSharpReference x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">ProcessEnv</CSharpReference>
+              <OutArgument x:TypeArguments="seo:ProcessEnvironment">
+                <CSharpReference x:TypeArguments="seo:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">ProcessEnv</CSharpReference>
               </OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="sen:ProcessEnvironment">
-                <CSharpValue x:TypeArguments="sen:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">ProcessEnvironment.Value</CSharpValue>
+              <InArgument x:TypeArguments="seo:ProcessEnvironment">
+                <CSharpValue x:TypeArguments="seo:ProcessEnvironment" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">ProcessEnvironment.Value</CSharpValue>
               </InArgument>
             </Assign.Value>
           </Assign>
         </If.Else>
       </If>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Product Key\\Get Product Key.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Actions\\Product Info\\Get Product Key.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Product Key\\Get Product Key.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,806" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Actions\\Product Info\\Get Product Key.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:String" x:Key="ProductKey">
             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">ProductKey</CSharpReference>
@@ -150,12 +146,12 @@
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Product Info\\Get Product Name.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="400,54" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Actions\\Product Info\\Get Product Name.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Product Info\\Get Product Name.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,806" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Actions\\Product Info\\Get Product Name.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:String" x:Key="ProductName">
             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">ProductName</CSharpReference>
@@ -163,28 +159,28 @@
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
     </Parallel>
-    <Assign DisplayName="Assign - Output Environment Settings" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign - Output Environment SettingsAssign" sap:VirtualizedContainerService.HintSize="1598,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
-        <OutArgument x:TypeArguments="sen:EnvironmentSettings">
-          <CSharpReference x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Settings</CSharpReference>
+        <OutArgument x:TypeArguments="seo:EnvironmentSettings">
+          <CSharpReference x:TypeArguments="seo:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">Settings</CSharpReference>
         </OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="sen:EnvironmentSettings">
-          <CSharpValue x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">new EnvironmentSettings(ProcessEnv, ProductKey, ProductName)</CSharpValue>
+        <InArgument x:TypeArguments="seo:EnvironmentSettings">
+          <CSharpValue x:TypeArguments="seo:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">new S.Environments.Objects.EnvironmentSettings(ProcessEnv, ProductKey, ProductName)</CSharpValue>
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Settings\\Set Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,206" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Actions\\Settings\\Set Environment Settings.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Actions\\Settings\\Set Environment Settings.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1598,206" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Actions\Settings\Set Environment Settings.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sen:EnvironmentSettings" x:Key="Settings">
-          <CSharpValue x:TypeArguments="sen:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Settings</CSharpValue>
+        <InArgument x:TypeArguments="seo:EnvironmentSettings" x:Key="Settings">
+          <CSharpValue x:TypeArguments="seo:EnvironmentSettings" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">Settings</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
